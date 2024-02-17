@@ -22,7 +22,7 @@ namespace ProbeAufgabeAPI.Migrations
                     Failsafe = table.Column<bool>(type: "bit", nullable: true),
                     TempMin = table.Column<int>(type: "int", nullable: true),
                     TempMax = table.Column<int>(type: "int", nullable: true),
-                    InstallationPosition = table.Column<int>(type: "int", nullable: true),
+                    InstallationPosition = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     InsertInto19InchCabinet = table.Column<bool>(type: "bit", nullable: true),
                     MotionEnable = table.Column<bool>(type: "bit", nullable: true),
                     SiplusCatalog = table.Column<bool>(type: "bit", nullable: true),

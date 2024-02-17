@@ -1,12 +1,12 @@
 export class DeviceInformation {
-    uid: number
+    uid?: number
     id?: string;
     name?: string;
     deviceTypeId?: string;
     failsafe?: boolean;
     tempMin?: number;
     tempMax?: number;
-    installationPosition?: InstallationPositions;
+    installationPosition?: string;
     insertInto19InchCabinet?: boolean;
     motionEnable?: boolean;
     siplusCatalog?: boolean;
@@ -15,13 +15,4 @@ export class DeviceInformation {
     positionAxisNumber?: number;
     advancedEnvironmentalConditions?: boolean;
 
-    constructor(nUid: number) {
-        this.uid = nUid;
-    }
-
-}
-
-enum InstallationPositions {
-    horizontal,
-    vertical
 }

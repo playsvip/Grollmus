@@ -24,11 +24,11 @@ namespace ProbeAufgabeAPI.Migrations
 
             modelBuilder.Entity("ProbeAufgabeAPI.DeviceInformation", b =>
                 {
-                    b.Property<int>("Uid")
+                    b.Property<int?>("Uid")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Uid"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Uid"));
 
                     b.Property<bool?>("AdvancedEnvironmentalConditions")
                         .HasColumnType("bit");
@@ -45,8 +45,8 @@ namespace ProbeAufgabeAPI.Migrations
                     b.Property<bool?>("InsertInto19InchCabinet")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("InstallationPosition")
-                        .HasColumnType("int");
+                    b.Property<string>("InstallationPosition")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("MotionEnable")
                         .HasColumnType("bit");
