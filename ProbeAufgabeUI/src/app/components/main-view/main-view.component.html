@@ -1,3 +1,5 @@
-<h1>Probeaufgabe - Holzner Christian - 17.02.2024</h1>
-<app-device-list></app-device-list>
-<input type="file" (change)="onFileChanged($event)" />
+<h1>{{this.titleString}}</h1>
+<div class="mainView">
+    <app-device-list [devices]="allDevices"></app-device-list>
+    <input type="file" (change)="onFileChanged($event)" />
+</div>

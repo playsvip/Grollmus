@@ -10,8 +10,8 @@ describe('DeviceOverviewTileComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [DeviceOverviewTileComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(DeviceOverviewTileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

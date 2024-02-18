@@ -12,7 +12,7 @@ using ProbeAufgabeAPI.Data;
 namespace ProbeAufgabeAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240217143500_Initial")]
+    [Migration("20240218115226_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -68,6 +68,9 @@ namespace ProbeAufgabeAPI.Migrations
 
                     b.Property<int?>("TempMin")
                         .HasColumnType("int");
+
+                    b.Property<bool?>("TerminalElement")
+                        .HasColumnType("bit");
 
                     b.HasKey("Uid");
 

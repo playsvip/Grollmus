@@ -1,8 +1,6 @@
 @for (device of devices; track device.uid) {
-    <app-device-overview-tile
-    routerLink="/detail" [state]="device"
-    [deviceInfo]="device">
-  </app-device-overview-tile>
-  } @empty {
-    Keine Geräte vorhanden
-  }
+<app-device-overview-tile (deleteItemEvent)="deleteItem($event)" [deviceInfo]="device">
+</app-device-overview-tile>
+} @empty {
+{{this.stringNoDevices}}
+}

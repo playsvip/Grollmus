@@ -1,0 +1,43 @@
+table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    border: 0.1rem solid;
+}
+
+table td {
+    border-left: 0.1rem solid;
+    border-right: 0.1rem solid;
+    padding: 0.4rem 0rem 0.4rem 0.4rem;
+}
+
+table td:first-child {
+    border-left: none;
+}
+
+table td:last-child {
+    border-right: none;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 4rem;
+}
+
+.title {
+    display: flex;
+}
+
+h2 {
+    align-self: center;
+    margin-left: 2rem;
+    color: gray;
+}
+
+button {
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    justify-self: end;
+}

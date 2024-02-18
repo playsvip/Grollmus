@@ -1,1 +1,34 @@
-<p>{{this.deviceData.name}}</p>
+<div class="header">
+    <div class="title">
+        <h1>{{this.deviceData.name}}</h1>
+        <h2>{{this.deviceData.deviceTypeId}}</h2>
+    </div>
+    <button [routerLink]="['']">{{this.returnString}}</button>
+</div>
+
+<table>
+    <tr>
+        <td>{{this.failsageString}}</td>
+        <td>{{this.deviceData.failsafe}}</td>
+    </tr>
+    <tr>
+        <td>{{this.temperaturString}}</td>
+        <td>{{tempString}}</td>
+    </tr>
+    <tr>
+        <td>{{this.installString}}</td>
+        <td>{{this.deviceData.installationPosition}}</td>
+    </tr>
+    <tr>
+        <td>{{this.insertIntoString}}</td>
+        <td>{{this.deviceData.insertInto19InchCabinet}}</td>
+    </tr>
+    <tr *ngIf="this.deviceData.terminalElement !== null">
+        <td>{{this.terminalString}}</td>
+        <td>{{this.deviceData.terminalElement}}</td>
+    </tr>
+    <tr *ngIf="this.deviceData.advancedEnvironmentalConditions !== null">
+        <td>{{this.advancedString}}</td>
+        <td>{{this.deviceData.advancedEnvironmentalConditions}}</td>
+    </tr>
+</table>

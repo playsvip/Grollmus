@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DeviceInformation } from '../../models/device-information';
-import { DeviceService } from '../../services/device.service';
 
 @Component({
   selector: 'app-device-list',
@@ -8,15 +7,11 @@ import { DeviceService } from '../../services/device.service';
   styleUrl: './device-list.component.css'
 })
 export class DeviceListComponent {
-  public devices = [] as DeviceInformation[];
+  protected stringNoDevices = "Keine Geräte vorhanden";
+  
+  @Input() public devices = [] as DeviceInformation[];
 
-  constructor(private deviceService: DeviceService) { }
-
-  ngOnInit(): void {
-    this.deviceService.getAllDevices().subscribe((result: DeviceInformation[]) => this.HandleResult(result));
-  }
-
-  private HandleResult(result: DeviceInformation[]){
+  public deleteItem(result: DeviceInformation[]): void {
     this.devices = result;
   }
 }

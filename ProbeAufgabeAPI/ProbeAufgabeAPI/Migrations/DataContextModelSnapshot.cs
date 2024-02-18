@@ -66,6 +66,9 @@ namespace ProbeAufgabeAPI.Migrations
                     b.Property<int?>("TempMin")
                         .HasColumnType("int");
 
+                    b.Property<bool?>("TerminalElement")
+                        .HasColumnType("bit");
+
                     b.HasKey("Uid");
 
                     b.ToTable("DeviceInformations");

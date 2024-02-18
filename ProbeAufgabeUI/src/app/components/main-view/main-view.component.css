@@ -1,0 +1,11 @@
+app-device-list {
+    display: flex;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.mainView {
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+}

@@ -1,0 +1,8 @@
+app-device-overview-tile {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 15rem;
+    border: solid 0.1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}

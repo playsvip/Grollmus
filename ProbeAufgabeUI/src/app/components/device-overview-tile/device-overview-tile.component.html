@@ -1,3 +1,6 @@
-
-<p>{{deviceInfo?.name}}</p>
-
+<div class="overViewItem" [routerLink]="['/detail', this.deviceInfo.uid]">
+    <p>{{this.deviceInfo.name}}</p>
+    <p class="overViewType">{{this.deviceInfo.deviceTypeId}}</p>
+    <p>{{failsafeString}} {{this.deviceInfo.failsafe}}</p>
+</div>
+<button (click)="onRemove()">X</button>

@@ -27,6 +27,7 @@ namespace ProbeAufgabeAPI.Migrations
                     MotionEnable = table.Column<bool>(type: "bit", nullable: true),
                     SiplusCatalog = table.Column<bool>(type: "bit", nullable: true),
                     SimaticCatalog = table.Column<bool>(type: "bit", nullable: true),
+                    TerminalElement = table.Column<bool>(type: "bit", nullable: true),
                     AdvancedEnvironmentalConditions = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>

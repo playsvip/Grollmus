@@ -13,6 +13,6 @@ export class DeviceInformation {
     simaticCatalog?: boolean;
     rotationAxisNumber?: number;
     positionAxisNumber?: number;
+    terminalElement?: boolean;
     advancedEnvironmentalConditions?: boolean;
-
 }
